@@ -1,0 +1,1 @@
+curl https://assets.01-edu.org/devops-branch/HeadTail.txt | (head - 1 && tail -1)
