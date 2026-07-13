@@ -1,0 +1,1 @@
+find . -type f -name "*.txt" -printf "%f\n" | cut -d "." -f 1
