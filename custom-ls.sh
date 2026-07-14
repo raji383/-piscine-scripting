@@ -1,1 +1,1 @@
-ls -lgaSs
+alias custom-ls='ls -lgaSs'
