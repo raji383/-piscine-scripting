@@ -1,0 +1,1 @@
+nohup sh -c 'cat facts | grep "moon" | tee /dev/stdout >/dev/null && echo "The moon fact was found!" >> output.txt' &
