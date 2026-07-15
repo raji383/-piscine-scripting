@@ -1,9 +1,11 @@
 cat > show-info.sh << 'EOF'
-cat -e << END
-USER=$USER
-HOME=$HOME
-SHELL=$SHELL
-END
+
+cat -e << INFO
+The current directory is: $PWD
+The default paths are: $PATH
+The current user is: aberhili
+INFO
+
 EOF
 
 chmod +x show-info.sh
