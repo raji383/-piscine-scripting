@@ -10,7 +10,7 @@ if ! [[ $1 =~ ^-?[0-9]+$ ]]; then
     exit 0
 fi
 
-if [[ $1 > 5 ]] || [[ $1 == 5 ]]; then
+if [[ $1 > 5 ]] ; then
     echo "Error"
     exit 0
 fi
