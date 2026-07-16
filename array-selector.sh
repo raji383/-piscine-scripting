@@ -1,4 +1,5 @@
 #!/bin/bash
+Array=("red" "blue" "green" "white" "black")
 
 if [[ $# -ne 1 ]]; then
     echo "Error"
@@ -10,10 +11,9 @@ if ! [[ $1 =~ ^-?[0-9]+$ ]]; then
     exit 0
 fi
 
-if [[ $1 > 5 ]]; then
+if [[ $1 -gt ${#Array[@]} ]]; then
     echo "Error"
     exit 0
 fi
-Array=("red" "blue" "green" "white" "black")
 I=$1-1
 echo ${Array[$I]}
