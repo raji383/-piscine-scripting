@@ -1,9 +1,20 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-Array=('red' 'blue' 'green' 'white' 'black')
-if [[ ! $1 =~ ^[0-9]+$ ]] || [[ $1 -le 0 ]] || [[ $1 -gt ${#COLORS[@]} ]]; then
-	echo 'Error'
-else
-	POS=$(($1 - 1))
-	echo ${Array[$POS]}
+if [[ $# -ne 1 ]]; then
+    echo "Error"
+    exit 0
 fi
+
+if ! [[ $1 =~ ^-?[0-9]+$ ]]; then
+    echo "Error"
+    exit 0
+fi
+
+if [[ $1 > 5 ]] || [[ $1 == 5 ]]; then
+    echo "Error"
+    exit 0
+fi
+
+Array=("red" "blue" "green" "white" "black")
+I=$1-1
+echo ${Array[$I]}
