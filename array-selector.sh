@@ -1,5 +1,8 @@
 #!/bin/bash
 
+IFS='
+'
+
 if [[ $# -ne 1 ]]; then
     echo "Error"
     exit 0
