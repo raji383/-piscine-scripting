@@ -10,8 +10,8 @@ if ! [[ $1 =~ ^-?[0-9]+$ ]]; then
     exit 0
 fi
 
-if [[ $1 > 6 ]]; then
-    echo "Error"
+if [[ $1 > 5 ]]; then
+    echo ${Array[5]}
     exit 0
 fi
 Array=("red" "blue" "green" "white" "black")
