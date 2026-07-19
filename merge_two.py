@@ -1,18 +1,21 @@
 import json
-def merge_two(dictionary):
-   new={}
-   while True:
-      key= input("Enter Key: ")
-      if key =="exit":
+
+def merge_two(dicta):
+    dicti = {}
+    while True:
+        print("Add a new entry:")
+        key = input("key: ")
+        if key in dicti:
             break
-      v=input("Enter value: ")
-      try:
-            value = int(v)
-      except ValueError:
-          break
-      new[key]=value
-      d=dictionary.copy()
-      d.update(new)
-   return json.dumps(d)
+        if key == "exit":
+            break
+        val = input("value: ")
+        try:
+            value = int(val)
+        except ValueError:
+            break
+        dicti[key] = value
+    dicto = dicta.copy()
+    dicto.update(dicti)
 
-
+    return json.dumps(dicto)
