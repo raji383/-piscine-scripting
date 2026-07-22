@@ -1,1 +1,1 @@
-ls -l | awk 'NB%2==0'
+ls -l | awk 'NB%2~0'
