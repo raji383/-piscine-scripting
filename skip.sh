@@ -1,1 +1,2 @@
-ls -l | awk 'NB%2~0'
+#!/bin/bash
+ls -l | awk 'NR % 2 == 0'
